@@ -1,5 +1,7 @@
 package it.zeze.fanta.service.definition;
 
+import java.util.List;
+
 import it.zeze.fantaformazioneweb.entity.Squadre;
 
 public interface SquadreInterface {
@@ -13,5 +15,7 @@ public interface SquadreInterface {
 	public Squadre getSquadraByNome(String nomeSquadraToSearch);
 	
 	public Squadre getSquadraById(int idSquadra);
+	
+	public List<Squadre> getSquadre();
 
 }
