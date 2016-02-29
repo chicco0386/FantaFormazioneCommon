@@ -21,5 +21,7 @@ public interface GiornateInterface {
 	public Giornate getLastGiornata();
 	
 	public List<Giornate> getGiornateByStagione(String stagione);
+	
+	List<Giornate> getGiornateAll();
 
 }
