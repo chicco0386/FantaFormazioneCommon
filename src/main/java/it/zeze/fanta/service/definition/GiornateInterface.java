@@ -2,6 +2,7 @@ package it.zeze.fanta.service.definition;
 
 import java.util.List;
 
+import it.zeze.fanta.service.bean.SelectItem;
 import it.zeze.fantaformazioneweb.entity.Giornate;
 
 public interface GiornateInterface {
@@ -22,6 +23,8 @@ public interface GiornateInterface {
 	
 	public List<Giornate> getGiornateByStagione(String stagione);
 	
-	List<Giornate> getGiornateAll();
+	public List<Giornate> getGiornateAll();
+	
+	public List<SelectItem> getStagioniAll();
 
 }
