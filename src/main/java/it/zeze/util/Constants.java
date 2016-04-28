@@ -12,6 +12,11 @@ public class Constants {
 	public static final String CONF_KEY_HTML_FILE_GIOCATORI_DIFENSORI = "nomeFileHTMLGiocatoriD";
 	public static final String CONF_KEY_HTML_FILE_GIOCATORI_CENTROCAMPISTI = "nomeFileHTMLGiocatoriC";
 	public static final String CONF_KEY_HTML_FILE_GIOCATORI_ATTACCANTI = "nomeFileHTMLGiocatoriA";
+	
+	public static final String CONF_KEY_HTML_FILE_GIOCATORI_PORTIERI_NEW = "nomeFileHTMLGiocatoriPNew";
+	public static final String CONF_KEY_HTML_FILE_GIOCATORI_DIFENSORI_NEW = "nomeFileHTMLGiocatoriDNew";
+	public static final String CONF_KEY_HTML_FILE_GIOCATORI_CENTROCAMPISTI_NEW = "nomeFileHTMLGiocatoriCNew";
+	public static final String CONF_KEY_HTML_FILE_GIOCATORI_ATTACCANTI_NEW = "nomeFileHTMLGiocatoriANew";
 
 	public static final String CONF_KEY_HTML_FILE_CALENDARIO = "nomeFileHTMLCalendario";
 	public static final String CONF_KEY_HTML_FILE_CALENDARIO_NEW = "nomeFileHTMLCalendarioNew";

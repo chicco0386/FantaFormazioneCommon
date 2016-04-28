@@ -7,14 +7,14 @@ import com.google.gson.Gson;
 
 public class JSONUtil {
 
-	public <T> T parse(String json, Class<T> obj) {
+	public static <T> T parse(String json, Class<T> obj) {
 		T toReturn = null;
 		Gson gson = new Gson();
 		toReturn = gson.fromJson(json, obj);
 		return toReturn;
 	}
 	
-	public class giocatoriQuotazioni {
+	public class GiocatoriQuotazioni {
 		private List<List<String>> data = new ArrayList<List<String>>();
 
 		public List<List<String>> getData() {
