@@ -9,7 +9,7 @@ public interface CalendarioInterface {
 	
 	public Giornate getGiornate();
 
-	public void inizializzaCalendario();
+	public void inizializzaCalendario(String stagione);
 	
 	public void unmarshallAndSaveFromNodeCalendario(int idGiornata, TagNode calendarNode);
 	
