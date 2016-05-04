@@ -2,6 +2,6 @@ package it.zeze.fanta.service.definition;
 
 public interface FormazioniFGInterface {
 
-	public void unmarshallAndSaveFromHtmlFile();
+	public void unmarshallAndSaveFromHtmlFile(String stagione);
 
 }

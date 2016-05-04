@@ -7,7 +7,7 @@ import it.zeze.fantaformazioneweb.entity.Giornate;
 
 public interface GiornateInterface {
 	
-	public void unmarshallAndSaveFromHtmlFile();
+	public void unmarshallAndSaveFromHtmlFile(String stagione);
 	
 	public String getStagione(String stagioneInput);
 	
@@ -26,5 +26,4 @@ public interface GiornateInterface {
 	public List<Giornate> getGiornateAll();
 	
 	public List<SelectItem> getStagioniAll();
-
 }
