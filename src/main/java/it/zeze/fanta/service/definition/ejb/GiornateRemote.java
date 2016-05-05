@@ -1,10 +1,10 @@
 package it.zeze.fanta.service.definition.ejb;
 
-import javax.ejb.Local;
+import javax.ejb.Remote;
 
 import it.zeze.fanta.service.definition.GiornateInterface;
 
-@Local
+@Remote
 public interface GiornateRemote extends GiornateInterface {
 
 }
