@@ -10,6 +10,7 @@ import it.zeze.fanta.service.definition.ejb.GiocatoriRemote;
 import it.zeze.fanta.service.definition.ejb.GiornateRemote;
 import it.zeze.fanta.service.definition.ejb.SquadreRemote;
 import it.zeze.fanta.service.definition.ejb.StatisticheRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.GiocatoriSeamRemote;
 
 public class JNDIUtils {
 
@@ -39,6 +40,10 @@ public class JNDIUtils {
 	
 	public static <T> T getGiocatoriEJB() throws NamingException {
 		return (T) lookupEjb("GiocatoriEJB", GiocatoriRemote.class);
+	}
+	
+	public static <T> T getGiocatoriSeamEJB() throws NamingException {
+		return (T) lookupEjb("GiocatoriSeamEJB", GiocatoriSeamRemote.class);
 	}
 	
 	public static <T> T getFormazioniFGEJB() throws NamingException {
