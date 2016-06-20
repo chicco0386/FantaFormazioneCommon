@@ -3,14 +3,14 @@ package it.zeze.fanta.ejb.util;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
-import it.zeze.fanta.service.definition.ejb.CalendarioRemote;
-import it.zeze.fanta.service.definition.ejb.FormazioniFGRemote;
-import it.zeze.fanta.service.definition.ejb.FormazioniGazzettaRemote;
 import it.zeze.fanta.service.definition.ejb.GiocatoriRemote;
-import it.zeze.fanta.service.definition.ejb.GiornateRemote;
-import it.zeze.fanta.service.definition.ejb.SquadreRemote;
-import it.zeze.fanta.service.definition.ejb.StatisticheRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.CalendarioSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniFGSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniGazzettaSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.GiocatoriSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.GiornateSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.SquadreSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.StatisticheSeamRemote;
 
 public class JNDIUtils {
 
@@ -31,15 +31,15 @@ public class JNDIUtils {
 	}
 
 	public static <T> T getCalendarioEJB() throws NamingException {
-		return (T) lookupEjb("CalendarioEJB", CalendarioRemote.class);
+		return (T) lookupEjb("CalendarioSeamEJB", CalendarioSeamRemote.class);
 	}
 	
 	public static <T> T getGiornateEJB() throws NamingException {
-		return (T) lookupEjb("GiornateEJB", GiornateRemote.class);
+		return (T) lookupEjb("GiornateSeamEJB", GiornateSeamRemote.class);
 	}
 	
 	public static <T> T getGiocatoriEJB() throws NamingException {
-		return (T) lookupEjb("GiocatoriEJB", GiocatoriRemote.class);
+		return (T) lookupEjb("GiocatoriSeamEJB", GiocatoriRemote.class);
 	}
 	
 	public static <T> T getGiocatoriSeamEJB() throws NamingException {
@@ -47,19 +47,19 @@ public class JNDIUtils {
 	}
 	
 	public static <T> T getFormazioniFGEJB() throws NamingException {
-		return (T) lookupEjb("FormazioniFGEJB", FormazioniFGRemote.class);
+		return (T) lookupEjb("FormazioniFGSeamEJB", FormazioniFGSeamRemote.class);
 	}
 	
 	public static <T> T getFormazioniGazzettaEJB() throws NamingException {
-		return (T) lookupEjb("FormazioniGazzettaEJB", FormazioniGazzettaRemote.class);
+		return (T) lookupEjb("FormazioniGazzettaSeamEJB", FormazioniGazzettaSeamRemote.class);
 	}
 	
 	public static <T> T getSquadreEJB() throws NamingException {
-		return (T) lookupEjb("SquadreEJB", SquadreRemote.class);
+		return (T) lookupEjb("SquadreSeamEJB", SquadreSeamRemote.class);
 	}
 	
 	public static <T> T getStatisticheEJB() throws NamingException {
-		return (T) lookupEjb("StatisticheEJB", StatisticheRemote.class);
+		return (T) lookupEjb("StatisticheSeamEJB", StatisticheSeamRemote.class);
 	}
 
 }
