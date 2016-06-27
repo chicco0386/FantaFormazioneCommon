@@ -43,7 +43,7 @@ public class JNDIUtils {
 	}
 	
 	public static <T> T getGiocatoriEJB() throws NamingException {
-		return (T) lookupEjb("GiocatoriSeamEJB", GiocatoriRemote.class);
+		return (T) lookupEjb("GiocatoriSeamEJB", GiocatoriSeamRemote.class);
 	}
 	
 	public static <T> T getGiocatoriSeamEJB() throws NamingException {
