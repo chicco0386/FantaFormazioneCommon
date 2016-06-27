@@ -10,6 +10,7 @@ import it.zeze.fanta.service.definition.ejb.UtentiFormazioniRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.CalendarioSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniFGSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniGazzettaSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.GiocatoriSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.GiornateSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.ProbabiliFormazioniSeamRemote;
@@ -71,7 +72,7 @@ public class JNDIUtils {
 	}
 	
 	public static <T> T getFormazioniEJB() throws NamingException {
-		return (T) lookupEjb("FormazioniEJB", FormazioniRemote.class);
+		return (T) lookupEjb("FormazioniSeamEJB", FormazioniSeamRemote.class);
 	}
 	
 	public static <T> T getProbabiliFormazioniEJB() throws NamingException {
