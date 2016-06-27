@@ -10,8 +10,6 @@ public interface ProbabiliFormazioniInterface {
 
 	boolean isFantaGazzettaSource(int probabilita);
 
-	void setResultList(List<ProbabiliFormazioni> resultList);
-
 	void insertProbFormazione(int idGiornata, int idUtentiFormazione, int idGiocatore, int probTit, int probPanc, String note);
 
 	void deleteProbFormazioniByUtentiFormazione(int idUtentiFormazione);
@@ -21,7 +19,5 @@ public interface ProbabiliFormazioniInterface {
 	List<ProbabiliFormazioni> getProbFormazioniByGiornataUtentiFormazione(int idGiornata, int idUtentiFormazione);
 
 	List<ProbabiliFormazioni> getRisultati(int idUtentiFormazione, String stagione, int numeroGiornata);
-
-	List<ProbabiliFormazioni> getResultList();
 	
 }

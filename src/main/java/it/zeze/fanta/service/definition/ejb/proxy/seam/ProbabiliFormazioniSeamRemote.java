@@ -13,8 +13,6 @@ public interface ProbabiliFormazioniSeamRemote {
 
 	boolean isFantaGazzettaSource(int probabilita);
 
-	void setResultList(List<ProbabiliFormazioniWrap> resultList);
-
 	void insertProbFormazione(int idGiornata, int idUtentiFormazione, int idGiocatore, int probTit, int probPanc, String note);
 
 	void deleteProbFormazioniByUtentiFormazione(int idUtentiFormazione);
@@ -24,7 +22,5 @@ public interface ProbabiliFormazioniSeamRemote {
 	List<ProbabiliFormazioniWrap> getProbFormazioniByGiornataUtentiFormazione(int idGiornata, int idUtentiFormazione);
 
 	List<ProbabiliFormazioniWrap> getRisultati(int idUtentiFormazione, String stagione, int numeroGiornata);
-
-	List<ProbabiliFormazioniWrap> getResultList();
 	
 }
