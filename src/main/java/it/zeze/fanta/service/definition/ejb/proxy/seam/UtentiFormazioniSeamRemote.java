@@ -1,11 +1,14 @@
-package it.zeze.fanta.service.definition;
+package it.zeze.fanta.service.definition.ejb.proxy.seam;
 
 import java.math.BigDecimal;
 
-import it.zeze.fanta.service.bean.ServiceResponse;
-import it.zeze.fantaformazioneweb.entity.UtentiFormazioni;
+import javax.ejb.Remote;
 
-public interface UtentiFormazioniInterface {
+import it.zeze.fanta.service.bean.ServiceResponse;
+import it.zeze.fantaformazioneweb.entity.wrapper.UtentiFormazioniWrap;
+
+@Remote
+public interface UtentiFormazioniSeamRemote {
 
 	void delete(int idUtentiFormazioni, int idUtente);
 
@@ -17,8 +20,8 @@ public interface UtentiFormazioniInterface {
 
 	boolean esisteUtentiFormazioni(int idUtenteFormazione, int idUtente);
 
-	UtentiFormazioni getUtentiFormazioniId(String nomeFormazione, int idUtente);
+	UtentiFormazioniWrap getUtentiFormazioniId(String nomeFormazione, int idUtente);
 
-	UtentiFormazioni getUtentiFormazioniByIdAndIdUtente(int idUtenteFormazione, int idUtente);
+	UtentiFormazioniWrap getUtentiFormazioniByIdAndIdUtente(int idUtenteFormazione, int idUtente);
 	
 }
