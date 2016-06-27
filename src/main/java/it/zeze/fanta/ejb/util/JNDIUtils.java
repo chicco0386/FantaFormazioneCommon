@@ -3,12 +3,16 @@ package it.zeze.fanta.ejb.util;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
+import it.zeze.fanta.service.definition.ejb.FormazioneMercatoRemote;
+import it.zeze.fanta.service.definition.ejb.FormazioniRemote;
 import it.zeze.fanta.service.definition.ejb.GiocatoriRemote;
+import it.zeze.fanta.service.definition.ejb.UtentiFormazioniRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.CalendarioSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniFGSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniGazzettaSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.GiocatoriSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.GiornateSeamRemote;
+import it.zeze.fanta.service.definition.ejb.proxy.seam.ProbabiliFormazioniSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.SquadreSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.StatisticheSeamRemote;
 
@@ -60,6 +64,22 @@ public class JNDIUtils {
 	
 	public static <T> T getStatisticheEJB() throws NamingException {
 		return (T) lookupEjb("StatisticheSeamEJB", StatisticheSeamRemote.class);
+	}
+	
+	public static <T> T getFormazioniMercatoEJB() throws NamingException {
+		return (T) lookupEjb("FormazioneMercatoEJB", FormazioneMercatoRemote.class);
+	}
+	
+	public static <T> T getFormazioniEJB() throws NamingException {
+		return (T) lookupEjb("FormazioniEJB", FormazioniRemote.class);
+	}
+	
+	public static <T> T getProbabiliFormazioniEJB() throws NamingException {
+		return (T) lookupEjb("ProbabiliFormazioniSeamEJB", ProbabiliFormazioniSeamRemote.class);
+	}
+	
+	public static <T> T getUtentiFormazioniEJB() throws NamingException {
+		return (T) lookupEjb("UtentiFormazioniEJB", UtentiFormazioniRemote.class);
 	}
 
 }
