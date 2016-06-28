@@ -4,11 +4,7 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 
 import it.zeze.fanta.service.definition.ejb.FormazioneMercatoRemote;
-import it.zeze.fanta.service.definition.ejb.FormazioniRemote;
-import it.zeze.fanta.service.definition.ejb.GiocatoriRemote;
-import it.zeze.fanta.service.definition.ejb.UtentiFormazioniRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.CalendarioSeamRemote;
-import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioneMercatoSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniFGSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniGazzettaSeamRemote;
 import it.zeze.fanta.service.definition.ejb.proxy.seam.FormazioniSeamRemote;
@@ -70,7 +66,7 @@ public class JNDIUtils {
 	}
 	
 	public static <T> T getFormazioniMercatoEJB() throws NamingException {
-		return (T) lookupEjb("FormazioneMercatoSeamEJB", FormazioneMercatoSeamRemote.class);
+		return (T) lookupEjb("FormazioneMercatoEJB", FormazioneMercatoRemote.class);
 	}
 	
 	public static <T> T getFormazioniEJB() throws NamingException {
