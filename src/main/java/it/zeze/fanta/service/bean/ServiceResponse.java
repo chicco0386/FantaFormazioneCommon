@@ -22,6 +22,10 @@ public class ServiceResponse implements Serializable {
 		messageResponse.add(message);
 	}
 	
+	public void addAllMessage(List<MessageResponse> listMessages){
+		messageResponse.addAll(listMessages);
+	}
+	
 	public List<MessageResponse> getMessageResponse() {
 		return messageResponse;
 	}
