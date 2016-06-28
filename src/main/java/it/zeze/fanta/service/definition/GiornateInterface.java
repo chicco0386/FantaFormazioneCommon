@@ -23,7 +23,7 @@ public interface GiornateInterface {
 	
 	public List<Giornate> getGiornateByStagione(String stagione);
 	
-	public List<Giornate> getGiornateAll();
+	public List<Giornate> getGiornateAll(String stagione);
 	
 	public List<SelectItem> getStagioniAll();
 }

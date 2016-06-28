@@ -26,7 +26,7 @@ public interface GiornateSeamRemote {
 
 	List<Giornate> getGiornateByStagione(String stagione);
 
-	List<Giornate> getGiornateAll();
+	List<Giornate> getGiornateAll(String stagione);
 
 	List<SelectItem> getStagioniAll();
 
