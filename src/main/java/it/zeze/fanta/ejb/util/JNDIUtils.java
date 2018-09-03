@@ -30,7 +30,7 @@ public class JNDIUtils {
 
 	public static <T> T lookupEjb(String ejbName, Class<T> ejbInterface) throws NamingException {
 		// Retrieve the Home interface using JNDI lookup
-		return (T) ic.lookup("java:global/FantaFormazioneEAR/FantaWebService-0.0.1-SNAPSHOT/" + ejbName + "!" + ejbInterface.getName());
+		return (T) ic.lookup("java:global/FantaFormazioneEAR/FantaFormazioneEJB-0.0.1-SNAPSHOT/" + ejbName + "!" + ejbInterface.getName());
 	}
 
 	public static <T> T getCalendarioEJB() throws NamingException {
