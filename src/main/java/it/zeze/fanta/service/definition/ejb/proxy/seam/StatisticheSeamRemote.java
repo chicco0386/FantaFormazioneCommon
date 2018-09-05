@@ -20,4 +20,6 @@ public interface StatisticheSeamRemote {
 	
 	public List<StatisticheWrap> resetResumeStatistiche(List<Statistiche> resultList, Giornate giornate, Giocatori giocatori, String orderColumn, String orderDir);
 
+	public void downloadFromSite();
+
 }

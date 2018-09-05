@@ -15,4 +15,6 @@ public interface StatisticheInterface {
 	List<Statistiche> initResultList(Giornate giornate, Giocatori giocatori, String orderColumn, String orderDir);
 	
 	List<Statistiche> resetResumeStatistiche(List<Statistiche> resultList, Giornate giornate, Giocatori giocatori, String orderColumn, String orderDir);
+
+	public void downloadFromSite();
 }
