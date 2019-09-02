@@ -345,7 +345,7 @@ public class ClientRestUtils {
     public static void main(String[] args) throws Exception {
         Map<String, String> headerParams = new HashMap<String, String>();
 
-        InputStream response = getCall("https://www.fantagazzetta.com/Servizi/Voti.ashx?s=2018-19&g=2&tv=273177201713&t=17", headerParams, null, MediaType.APPLICATION_OCTET_STREAM_TYPE, InputStream.class);
+        InputStream response = getCall("https://www.fantacalcio.it/Servizi/Voti.ashx?s=2018-19&g=2&tv=273177201713&t=17", headerParams, null, MediaType.APPLICATION_OCTET_STREAM_TYPE, InputStream.class);
         System.out.println(IOUtils.toString(response));
 
     }
